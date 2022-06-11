@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function of Data</title>
+    <script src="/dist/d3.js"></script>
+</head>
+
+<body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <script>
+        var data = [300, 310, 320, 330];
+        var paragraph = d3.select("body")
+            .selectAll("p")
+            .data(data)
+            .text(function (d, i) {
+                console.log("d:" + d);
+                console.log("i:" + i);
+                console.log("this: " + this);
+                return d;
+            })
+
+
+    </script>
+</body>
+
+</html>
